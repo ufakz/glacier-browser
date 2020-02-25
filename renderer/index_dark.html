@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script> window.$ = window.jQuery = require('../assets/jquery-3.4.1.min.js')</script>
+    <script src="../assets/jquery-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="../assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index_dark.css">
+    <link rel="stylesheet" href="../assets/fontawesome/css/all.css">
+    <script src="../assets/bootstrap/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <header class="navbar navbar-default navbar-fixed-top" id="main-navbar">
+        <div class="container-fluid">
+            <section class="row">
+                <div class="col-md-2 col-sm-2">
+                    <div class="row">
+                        <button class="col-md-3 col-sm-3 btn btn-default" id="back-button" data-toggle="tooltip"
+                            title="Press to go back" data-placement="bottom">
+                            <i class="fa fa-chevron-left" style="font-size: 16px;"></i>
+                        </button>
+                        <button class="col-md-3 col-sm-3 btn btn-default" id="forward-button" data-toggle="tooltip"
+                            title="Press to go forward" data-placement="bottom">
+                            <i class="fa fa-chevron-right" style="font-size: 16px;"></i>
+                        </button>
+                        <button class="col-md-3 col-sm-3 btn btn-default" id="reload-button" data-toggle="tooltip"
+                            title="Reload page" data-placement="bottom">
+                            <i class="fa fa-redo-alt" style="font-size: 16px;"></i>
+                        </button>
+                        <button class="col-md-3 col-sm-3 btn btn-default" id="home-button" data-toggle="tooltip"
+                            title="Go to home page" data-placement="bottom">
+                            <i class="fa fa-home" style="font-size: 16px;"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-7 col-sm-7">
+                    <div class="row">
+                        <div class="col-md-11 col-sm-11">
+                            <input id="input-field" type="text" name="url" class="form-control" width="auto"
+                                placeholder="Enter URL">
+                        </div>
+                        <button class="col-md-1 col-sm-1 btn" id="submit-button" style="background-color: dodgerblue"
+                            data-toggle="tooltip" title="Search or Go to website" data-placement="bottom">
+                            <i class="fa fa-search" style="font-size: 16px; color: white"></i>
+                        </button>
+                    </div>
+                </div>
+                <div class="col-md-3 col-sm-3">
+                    <div class="row">
+                        <div class="col-md-6 col-sm-6">
+                            <button class="col-md-6 col-sm-6 btn btn-default hidden-sm" id="bookmark-but"
+                                data-toggle="tooltip" title="Bookmark this page" data-placement="bottom">
+                                <i class="fa fa-star"></i>
+                            </button>
+
+                            <button class="col-md-3 col-sm-3 btn btn-default" id="zoom-in" data-toggle="tooltip"
+                                title="Zoom In" data-placement="bottom">
+                                <i class="fa fa-search-plus"></i>
+                            </button>
+                            <button class="col-md-3 col-sm-3 btn btn-default" id="zoom-out" data-toggle="tooltip"
+                                title="Zoom Out" data-placement="bottom">
+                                <i class="fa fa-search-minus"></i>
+                            </button>
+                        </div>
+                        <button class="col-md-4 col-sm-4 hidden-sm btn btn-default open-file-button"
+                            data-toggle="tooltip" title="Open local file" data-placement="bottom" style="color: white">
+                            <i class="far fa-file-alt" style="font-size: 16px;"></i> Open
+                        </button>
+                        <div class="dropdown col-md-2 col-sm-2">
+                            <button class="btn btn-default dropdown-toggle" id="menu-button" data-toggle="dropdown"
+                                data-toggle="tooltip" title="Menu" data-placement="bottom">
+                                <i class="fa fa-bars" style="font-size: 16px;"></i>
+                            </button>
+                            <ul class="dropdown-menu dropdown-menu-right">
+                                <li id="new-tab-button" style="width: 260px"><a href="#">New Tab <span
+                                            class="pull-right small">Ctrl + T</span></a></li>
+                                <li id="new-window-button"><a href="#">New Window <span class="pull-right small">Ctrl +
+                                            N</span></a></li>
+                                <li class="open-file-button"><a href="#">Open <span class="pull-right small">Ctrl +
+                                            O</span></a></li>
+                                <li class="divider"></li>
+                                <li id="open-history-tab"><a href="#">History <span class="pull-right small">Ctrl +
+                                            H</span></a></li>
+                                <li id="open-bookmarks-tab"><a href="#">Bookmarks <span class="pull-right small">Ctrl +
+                                            B</span></a></li>
+                                <li id="add-to-bookmarks"><a href="#">Add to Bookmarks </a></li>
+                                <li id="find-in-page"><a href="#">Find In Page <span class="pull-right small">Ctrl +
+                                            F</span></a></li>
+                                <li id="print-button"><a href="#">Print <span class="pull-right small">Ctrl +
+                                            P</span></a></li>
+                                <li id="prefs"><a href="#">Preferences <span
+                                            class="pull-right small">Ctrl + I</span></a></li>
+                                <li id="open-dev-tools"><a href="#">Open Developer Tools <span
+                                            class="pull-right small">Ctrl + D</span></a></li>
+                                <li class="divider"></li>
+                                <li id="about-button" data-toggle="modal" data-target="#about-modal"><a href="#">About</a></li>
+                                <li id="close-window-button"><a href="#">Close Window <span
+                                            class="pull-right small">Ctrl + Q</span></a></li>
+                                <li id="exit-button"><a href="#">Quit <span class="pull-right small">Ctrl + Shift +
+                                            Q</span></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </header>
+
+    <div id="parent_div">
+        <div style="height: 33px" id="dumb-placeholder"></div>
+        <div class="row" style="display: none;" id="find-pane">
+            <div class="col-md-3">
+
+            </div>
+            <div class="col-md-6 row">
+                <div class="col-md-3">
+                    <p class="text-right" style="line-height: 2; margin-bottom: 0">Find In Page:</p>
+                </div>
+                <div class="col-md-7">
+                    <input id="find-key" class="form-control" width="auto" type="text">
+                </div>
+                <div class="col-md-2">
+                    <button class="btn btn-default" id="start-find-button">Go</button>
+                </div>
+
+            </div>
+            <div class="col-md-3">
+                <i class="fa fa-chevron-up" id="find-previous" style="margin-bottom: 0; font-size:30px; cursor: pointer"
+                    data-toggle="tooltip" title="Previous"></i>
+                <i class="fa fa-chevron-down" id="find-next"
+                    style="margin-bottom: 0; margin-left: 5px; font-size:30px; cursor: pointer" data-toggle="tooltip"
+                    title="Next"></i>
+                <p class="pull-right" id="close-find-pane" style="margin-bottom: 0; font-size:30px; cursor: pointer">
+                    &times;</p>
+            </div>
+        </div>
+        <ul class="nav nav-tabs" role="tablist">
+
+        </ul>
+
+        <div class="tab-content">
+            <div class="well container lead text-center" id="no-tab-message" style="background-color: #303030">Open a New Tab from the menu or press
+                Ctrl+T</div>
+        </div>
+    </div>
+    <!-- Modal -->
+    <div id="about-modal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                    <h4 class="modal-title"><span class="text-primary lead" style="font-style: italic">Glacier </span> A cross-platform web browser</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Glacier is a cross-platform web browser built using the open-source electron.js framework. 
+                        A final year undergraduate project submitted to the 
+                        Department of Computer Science, Ahmadu Bello University, Zaria.
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <p class="text-primary">&copy;2019 Department of Computer Science, ABU Zaria.</p>
+                    <button type="button" class="btn btn-default" data-dismiss="modal" style="color:white">Close</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!--<div class="modal fade" id="zoom-modal">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header lead">
+
+                </div>
+            </div>
+        </div>
+    </div>-->
+    <script src="ui.js"></script>
+    <script>
+        console.log(`${__dirname}`)
+        require('./browser.js')
+
+    </script>
+
+</body>
+
+</html>

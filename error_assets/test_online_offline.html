@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Are you online?</h1>
+            <div class="button-holder">
+                <button id="checkStatusButton" type="button">Check Status</button>
+            </div>
+        </header>
+        <section class="main">
+            <h2 id="h2-online">You are online</h2>
+            <h2 id="h2-offline">You are not online</h2>
+        </section>
+    </div>
+
+</body>
+<script>
+    const updateOnlineStatus = () => {
+        let status = navigator.onLine ? 'online' : 'offline'
+        console.log(status)
+        if (navigator.onLine) {
+            document.body.style.backgroundColor = 'green';
+            //document.getElementById('h2-checking').style.display = 'none';
+            document.getElementById('h2-online').style.display = 'block';
+            document.getElementById('h2-offline').style.display = 'none';
+        } else {
+            document.body.style.backgroundColor = 'red';
+            //document.getElementById('h2-checking').style.display = 'none';
+            document.getElementById('h2-online').style.display = 'none';
+            document.getElementById('h2-offline').style.display = 'block';
+        }
+
+        let note = new Notification('You are ' + status, { body: 'You are now' + status })
+        note.onclick = () => {
+            console.log('Notification clicked!')
+        }
+    }
+
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    document.getElementById('checkStatusButton').addEventListener('click', updateOnlineStatus);
+
+    updateOnlineStatus();
+</script>
+
+</html>

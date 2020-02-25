@@ -1,0 +1,53 @@
+{
+  "name": "browser",
+  "productName": "Glacier",
+  "version": "1.0.0",
+  "description": "A cross-platform portable web browser",
+  "main": "./renderer/main.js",
+  "scripts": {
+    "postinstall":"install-app-deps",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "electron .",
+    "pack":"build --dir",
+    "dist":"build --win --x64"
+  },
+  "build":{
+    "appId":"Glacier",
+    "category":"Productivity",
+    "dmg":{
+      "contents":[
+        {
+          "x":110,
+          "y":150
+        },
+        {
+          "x":240,
+          "y":150,
+          "type":"link",
+          "path":"/Applications"
+        }
+      ]
+    },
+    "linux":{
+      "target":[
+        "AppImage",
+        "deb"
+      ]
+    },
+    "win":{
+      "target":"nsis",
+      "icon":"build/icon.ico"
+    }
+  },
+  "author": "Umar Faruk Abdullahi",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^4.0.3",
+    "nodemon": "^1.19.1",
+    "mousetrap": "^1.6.3"
+  },
+  "devDependencies": {
+    "electron-builder": "^21.2.0",
+    "mousetrap": "^1.6.3"
+  }
+}

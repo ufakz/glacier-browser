@@ -1,0 +1,43 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    min-height: 30px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+#parent_div{
+    height: -webkit-fill-available;
+}
+
+#parent_div .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+.tab-content{
+    flex: 1;
+}
+
+.loading-spinner {
+    width: 50%;
+    height: 2px;
+    background-color:dodgerblue;
+    text-align: center;
+    animation: move .5s infinite linear;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.history-item,.bookmark-item,#delete-all-data{
+    cursor: pointer;
+}

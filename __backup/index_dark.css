@@ -1,0 +1,87 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    min-height: 30px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+#main-navbar{
+    background-color: black;
+}
+
+.btn-default{
+    background-color: black;
+    border-color: #544d4d; 
+}
+
+i{
+    color: white;
+}
+
+.open-file-button>span{
+    color: white;
+}
+
+#parent_div{
+    background-color: black;
+    color: white;
+    height: -webkit-fill-available;
+}
+
+.nav-tabs li a, .nav-tabs li a span i{
+    color: white;
+}
+
+#tab-pane, #tab-pane>webview{
+    color: white;
+}
+
+
+#parent_div .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#find-pane p,#find-pane button{
+    color: white;
+}
+
+#parent_div .nav, #parent_div .tab-content{
+    color: white;
+}
+
+.dropdown-menu{
+    background-color: black;
+    color: white;
+}
+
+.dropdown-menu>li>a{
+    color: white;
+}
+
+.tab-content{
+    flex: 1;
+}
+
+
+.loading-spinner{
+    width: 10rem;
+    height: 10rem;
+    display: inline-block;
+    border: 3px solid rgba(255,255,255,0.33);
+    border-radius: 50%;
+    border-top-color: #6d9bc3;
+    text-align: center;
+    animation: spin .5s  infinite linear;
+}
+
+@keyframes spin{
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}

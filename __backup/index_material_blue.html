@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../assets/materialize/css/materialize.min.css">
+    <script src="../assets/materialize/js/materialize.min.js"></script>
+</head>
+
+<body>
+    <ul class="sidenav" id="slide-out">
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+        <li>Hello</li>
+    </ul>
+
+    <div class="navbar-fixed">
+        <nav style="height:50px">
+            <div class="nav-wrapper white">
+                <div class="row">
+                    <a class="btn blue lighten-2 waves-effect col s1">Back</a>
+                    <a class="btn blue lighten-2 waves-effect col s1">Next</a>
+                    <input placeholder="Enter address here" class="col s7 blue-text"
+                        style="border: 2px solid dodgerblue;border-radius: 20px;margin-left: 10px;margin-right: 10px;">
+                    <a class="btn blue lighten-2 waves-effect col s1" id="go-button">Go</a>
+                    <a href="#" data-target="slide-out" class="sidenav-trigger">Menu</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <main id="app-home">
+        <div class="container">
+            <h5 class="blue-text">Search with Google</h5>
+            <div class="row">
+                <input placeholder="Enter search here" class="col s8 offset-s2 blue-text"
+                    style="border: 2px solid cornflowerblue;border-radius: 10px;">
+            </div>
+        </div>
+
+        <div class="container">
+            <h4 class="blue-text">Bookmarks</h4>
+            <div class="row">
+                <div class="col s2 offset-s1">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../res/img/dac_logo.png" class="circle responsive-img">
+                        </div>
+                        <div class="card-content">
+                            Google
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2 offset-s1">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../res/img/dac_logo.png" class="circle responsive-img">
+                        </div>
+                        <div class="card-content">
+                            Google
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2 offset-s1">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../res/img/dac_logo.png" class="circle responsive-img">
+                        </div>
+                        <div class="card-content">
+                            Google
+                        </div>
+                    </div>
+                </div>
+                <div class="col s2 offset-s1">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="../res/img/dac_logo.png" class="circle responsive-img">
+                        </div>
+                        <div class="card-content">
+                            Google
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="container">
+            <h4 class="blue-text">History</h4>
+            <ul>
+                <li class="blue-text">Link here</li>
+                <li class="blue-text">Link here</li>
+                <li class="blue-text">Link here</li>
+                <li class="blue-text">Link here</li>
+                <li class="blue-text">Link here</li>
+                <li class="blue-text">Link here</li>
+
+            </ul>
+        </div>
+    </main>
+
+    <div id="web-view-area" style="display:none">
+        <webview src ='../assets/test_page/index.html' id="view1" style="height:480px;width: 100%"></webview>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var elems = document.querySelectorAll('.sidenav');
+            var instance = M.Sidenav.init(elems, {});
+        });
+
+        const go_button = document.getElementById('go-button');
+        const web_view = document.getElementById('web-view-area');
+        go_button.addEventListener('click', (event) => {
+            document.getElementById('app-home').style.display = 'none';
+            web_view.style.display = 'block';
+            web_view.src = '../assets/test_page/index.html';
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.navbar{
+    min-height: 30px;
+    margin-bottom: 0px;
+    border: none;
+}
+
+#main-navbar{
+    background-color: #303030;
+}
+
+.btn-default{
+    background-color: #303030;
+    border-color: #544d4d; 
+}
+
+i{
+    color: white;
+}
+
+.open-file-button>span{
+    color: white;
+}
+
+#parent_div{
+    background-color: #303030;
+    color: white;
+    height: -webkit-fill-available;
+}
+
+.nav-tabs li a, .nav-tabs li a span i{
+    color: white;
+}
+
+#tab-pane, #tab-pane>webview{
+    color: white;
+}
+
+
+#parent_div .row{
+    margin-left: 0px;
+    margin-right: 0px;
+}
+
+#find-pane p,#find-pane button{
+    color: white;
+}
+
+#parent_div .nav, #parent_div .tab-content{
+    color: white;
+}
+
+.dropdown-menu{
+    background-color: #303030;
+    color: white;
+}
+
+.dropdown-menu>li>a{
+    color: white;
+}
+
+.tab-content{
+    flex: 1;
+}
+
+li.list-group-item.history-item.row, li.list-group-item.bookmark-item.row {
+    background-color: #303030;
+}
+
+li.active a span i{
+    color:#303030;
+}
+
+.loading-spinner {
+    width: 50%;
+    height: 2px;
+    background-color:dodgerblue;
+    text-align: center;
+    animation: move .5s infinite linear;
+}
+
+.modal-content{
+    background-color: #303030;
+    color: white;
+}
+
+@keyframes move {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(100%);
+    }
+}
+
+.history-item,.bookmark-item,#delete-all-data{
+    cursor: pointer;
+}
