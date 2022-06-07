@@ -1,5 +1,5 @@
 # Glacier
-## A cross-platform web browser built with Electron.js
+## A cross-platform web browser built with JavaScript (Node.js & Electron.js)
 
 Run `npm install` or `npm i` to install dependencies
 
