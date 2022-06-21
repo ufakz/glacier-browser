@@ -42,7 +42,7 @@
   "author": "Umar Faruk Abdullahi",
   "license": "ISC",
   "dependencies": {
-    "electron": "^4.0.3",
+    "electron": "^15.5.5",
     "nodemon": "^1.19.1",
     "mousetrap": "^1.6.3"
   },
