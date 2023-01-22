@@ -42,12 +42,12 @@
   "author": "Umar Faruk Abdullahi",
   "license": "ISC",
   "dependencies": {
-    "electron": "^15.5.5",
-    "nodemon": "^1.19.1",
+    "electron": "^22.0.3",
+    "nodemon": "^2.0.20",
     "mousetrap": "^1.6.3"
   },
   "devDependencies": {
-    "electron-builder": "^21.2.0",
+    "electron-builder": "^23.6.0",
     "mousetrap": "^1.6.3"
   }
 }
