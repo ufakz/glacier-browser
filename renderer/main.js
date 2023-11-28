@@ -196,16 +196,3 @@ const writePrefs = exports.writePrefs = (prefsContent) => {
         console.log("Preferences written successfully")
     })
 }
-/*const saveFile = exports.saveFile = (content) => {
-    const file = dialog.showSaveDialog(mainWindow, {
-        title: 'Save Page',
-        defaultPath: app.getPath('documents'),
-        filters: [
-            { name: 'HTML fIles', extensions: ['html', 'htm'] }
-        ]
-    });
-
-    if (!file) return;
-
-    fs.writeFileSync(file, content);
-}*/

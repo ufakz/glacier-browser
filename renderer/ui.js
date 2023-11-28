@@ -14,7 +14,6 @@ let histories = [];
 let PREFS = mainProcess.PREFS;
 const urlInput = document.getElementById('input-field');
 
-//mainProcess.readHistories(currentWindow);
 
 let tabsCounter = 0;
 let $currentWebView;
