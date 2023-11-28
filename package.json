@@ -5,49 +5,49 @@
   "description": "A cross-platform portable web browser",
   "main": "./renderer/main.js",
   "scripts": {
-    "postinstall":"install-app-deps",
+    "postinstall": "install-app-deps",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "electron .",
-    "pack":"build --dir",
-    "dist":"build --win --x64"
+    "pack": "build --dir",
+    "dist": "build --win --x64"
   },
-  "build":{
-    "appId":"Glacier",
-    "category":"Productivity",
-    "dmg":{
-      "contents":[
+  "build": {
+    "appId": "Glacier",
+    "category": "Productivity",
+    "dmg": {
+      "contents": [
         {
-          "x":110,
-          "y":150
+          "x": 110,
+          "y": 150
         },
         {
-          "x":240,
-          "y":150,
-          "type":"link",
-          "path":"/Applications"
+          "x": 240,
+          "y": 150,
+          "type": "link",
+          "path": "/Applications"
         }
       ]
     },
-    "linux":{
-      "target":[
+    "linux": {
+      "target": [
         "AppImage",
         "deb"
       ]
     },
-    "win":{
-      "target":"nsis",
-      "icon":"build/icon.ico"
+    "win": {
+      "target": "nsis",
+      "icon": "build/icon.ico"
     }
   },
   "author": "Umar Faruk Abdullahi",
   "license": "ISC",
   "dependencies": {
-    "electron": "^18.3.7",
-    "nodemon": "^1.19.1",
-    "mousetrap": "^1.6.3"
+    "electron": "^27.1.2",
+    "mousetrap": "^1.6.3",
+    "nodemon": "^3.0.1"
   },
   "devDependencies": {
-    "electron-builder": "^21.2.0",
+    "electron-builder": "^24.9.1",
     "mousetrap": "^1.6.3"
   }
 }

@@ -50,7 +50,6 @@ ipcMain.on('app-init', event => {
         splashWindow.close()      
     }
     thisWindow.show()
-    //thisWindow.openDevTools()
 })
 
 const createFirstWindow = () => {
@@ -85,7 +84,6 @@ const createWindow = exports.createWindow = () => {
 
     newWindow.once('ready-to-show', () => {
         newWindow.show();
-        //newWindow.openDevTools();
     })
 
     newWindow.on('closed', () => {
